@@ -1,0 +1,209 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Rosario:400,700');
+
+body {
+  font-family: "Open Sans", Geneva, Futura, Verdana, sans-serif;
+}
+
+a:link, a:visited { color: #444; }
+a:hover, a:active { background-color: #B0C4DE; }
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #000;
+  background-image: url('../images/bg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+.wrapper {
+  background-color: #cdcdcd;
+  box-shadow: 0 0 25px #000;
+  margin: 20px auto;
+  opacity: 0.9;
+  position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -55%);
+	width: 900px;
+  min-height: 600px;
+}
+    
+#left {
+  width: 155px;
+  float: left;
+}
+#left img {
+  width: 150px;
+  margin: -20px 25px 0 -20px;
+  box-shadow: 0 0 25px #000;
+  /* border-radius: 25px; */
+}
+#left a:hover, #left a:active { background-color: transparent; }
+
+#nav {
+  width: 100%;
+  display: inline-block;
+  text-align: right;
+  margin-top: 15px;
+}
+#nav .page-link {
+  margin: 10px 0;
+  padding-right: 25px;
+  text-align: right;
+  /* text-transform: uppercase; */
+}
+#nav .page-link a {
+  color: black;
+  text-decoration: none;
+}
+#nav .selected {
+  background-color: #fff;
+}
+
+#right {
+  width: 685px;
+  float: left;
+}
+#right h1 {
+  padding: 5px 20px 5px;
+  letter-spacing: 3pt;
+  font-family: Rosario, Futura, Verdana, sans-serif;
+  text-shadow: 1px 1px 2px #888;
+  display: inline-block;
+  font-variant: small-caps;
+  font-size: 36px;
+}
+
+#pages {
+  width: 100%;
+  position: relative;
+}
+#pages .page {
+  width: 100%;
+  display: inline-block;
+  padding: 20px;
+  height: 440px;
+  background-color: #fff;
+  position: absolute;
+  overflow-y: auto;
+  display: none;
+}
+#pages .page:first-child {
+  display: block;
+}
+#pages .page h3 {
+  /* border-bottom: 2px dotted #666; */
+  margin-bottom: 30px;
+  background-color: #000;
+  color: #fff;
+  padding: 4px 8px;
+  opacity: 0.75;
+}
+#pages .page p {
+  line-height: 2em;
+  margin: 0 15px 30px;
+}
+#pages .page .line {
+  clear: both;
+  overflow: hidden;
+}
+#pages .page .item {
+  float: left;
+  width: 150px;
+  font-weight: bold;
+  margin: 0 25px 30px 15px;
+}
+#pages .page .desc {
+  margin: 0 15px 15px 0;
+}
+
+.footer {
+  text-align: center;
+	padding: 20px 0;
+	color: #fff;
+	position: absolute;
+	top: 100%;
+	width: 900px;
+}
+
+
+@media screen and (max-width: 1025px) {
+  .wrapper, 
+  .footer {
+    width: 660px;
+  }
+  
+  #right {
+    width: 445px;
+  }
+  
+  #pages .page .item {
+    float: none;
+    margin: 15px 0;
+    width: auto;
+  }
+}
+
+@media screen and (max-height: 700px) and (orientation: landscape) {
+	body {
+		padding: 0 50px;
+		zoom: 0.9;
+	}
+	
+  .wrapper {
+    transform: none;
+    position: static;
+    margin: 60px auto;
+  }
+  
+  .footer {
+    top: 665px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 750px) and (orientation: portrait) {
+  .wrapper, 
+  .footer {
+    width: 420px;
+  }
+  
+  #left {
+    width: 105px;
+  }
+  #left img {
+    width: 100px;
+  }
+  
+  #nav {
+    font-size: 0.65em;
+  }
+  
+  #right {
+    width: 295px;
+  }
+  #right h1 {
+    font-size: 28px;
+  }
+  
+  #pages .page {
+    width: 85%;
+    height: 455px;
+  }
+  #pages .page h3 {
+    margin: 15px 0 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    zoom: 0.75;
+  }
+}
