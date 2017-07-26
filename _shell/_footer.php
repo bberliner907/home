@@ -1,15 +1,10 @@
 
         </div>
       </div>
-      
-<?php
-
-      $date = date_create();
-      $formatted = date_format($date, "Y");
     
-?>
-    
-      <div class="footer">All content &copy; <?php echo $formatted; ?>.</div>
+      <div class="footer">
+        All content &copy; <?php echo date_text("Y"); ?>.
+      </div>
     </div>
   
   </body>

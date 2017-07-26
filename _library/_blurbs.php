@@ -2,12 +2,11 @@
 <?php
 
 function show_blurbs($page) {
-  global $mysql_link, $site;
+  global $site;
   
-  $sql = "SELECT * FROM blurbs WHERE site='" . $site . "' AND page='" . $page . "' ORDER BY id";
-  $result = mysql_query($sql, $mysql_link);
+  $result = query("SELECT * FROM blurbs WHERE site='" . $site . "' AND page='" . $page . "' ORDER BY id");
   
-  while ($row = mysql_fetch_object($result)) {
+  while ($row = query_next($result)) {
   
 ?>
 

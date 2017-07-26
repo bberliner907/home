@@ -1,7 +1,9 @@
 
 <?php include("../_auth.php"); ?>
 
+<?php include("_library/_query.php"); ?>
 <?php include("_library/_ga.php"); ?>
+<?php include("_library/_date.php"); ?>
 
 <?php
 
@@ -11,15 +13,13 @@ $site = "home";
 
 $pages = array();
 
-$sql = "SELECT * FROM pages WHERE site='" . $site . "' ORDER BY id";
-$result = mysql_query($sql, $mysql_link);
+$result = query("SELECT * FROM pages WHERE site='" . $site . "' ORDER BY id");
 
-while ($row = mysql_fetch_object($result)) {
+while ($row = query_next($result)) {
   $pages[$row->page] = $row;
 }
 
 ?>
 
 <?php include("_library/_blurbs.php"); ?>
-
 <?php include("_library/_links.php"); ?>

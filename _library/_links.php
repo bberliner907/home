@@ -2,12 +2,9 @@
 <?php
 
 function show_links($page) {
-  global $mysql_link;
-  
-  $sql = "SELECT * FROM links WHERE page='" . $page . "' ORDER BY id";
-  $result = mysql_query($sql, $mysql_link);
+  $result = query("SELECT * FROM links WHERE page='" . $page . "' ORDER BY id");
 
-  while ($row = mysql_fetch_object($result)) {
+  while ($row = query_next($result)) {
 
 ?>
 
