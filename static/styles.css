@@ -95,9 +95,6 @@ a:hover, a:active { background-color: #B0C4DE; }
   overflow-y: auto;
   display: none;
 }
-#pages .page:first-child {
-  display: block;
-}
 #pages .page h3 {
   /* border-bottom: 2px dotted #666; */
   margin-bottom: 30px;

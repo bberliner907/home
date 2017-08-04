@@ -6,18 +6,21 @@
 <?php
 
 foreach ($pages as $page => $data) {
+	$style = (page_active($page)) ? "display: block;" : "";
   
 ?>
 
-  <div class="page" id="<?php echo $page; ?>">
+  <div class="page" 
+  	id="<?php echo $page; ?>"
+  	style="<?php echo $style; ?>">
 
 <?php 
 
     if ($data->type == "links") echo "<h3>" . $data->headline . "</h3>";
     
-    $func = "show_" . $data->type;
-    $func($page);
-      
+    $load = "show_" . $data->type;
+    $load($page);
+    
 ?>
 
   </div>

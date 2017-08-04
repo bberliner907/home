@@ -1,6 +1,7 @@
 
 <?php include("../_auth.php"); ?>
 
+<?php include("_library/_page.php"); ?>
 <?php include("_library/_query.php"); ?>
 <?php include("_library/_ga.php"); ?>
 <?php include("_library/_date.php"); ?>
@@ -10,6 +11,8 @@
 auth("brennberliner");
 
 $site = "home";
+
+$assets = "2017-08-03-01";
 
 $pages = array();
 
